@@ -23,7 +23,8 @@
         longURL_ = url;
         NSMutableString * temp_url_ = [NSMutableString new];
         [temp_url_ appendString:@"http://api.bit.ly/shorten?version=2.0.1&longUrl="];
-        [temp_url_ appendString:longURL_];
+        NSString * escapedURL = [longURL_ stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
+        [temp_url_ appendString:escapedURL];
         [temp_url_ appendString:@"&login=bitlyapidemo&apiKey=R_0da49e0a9118ff35f52f629d2d71bf07&format=xml"];
         queryURL_ = [NSURL URLWithString:temp_url_];
     }
