@@ -37,17 +37,17 @@
 {
     STAssertEqualObjects([parser_ longURL_], @"http://ya.ru", @"should be ya.ru");
     STAssertEqualObjects([parser_ queryURL_],
-                         [NSURL URLWithString:@"http://api.bit.ly/shorten?version=2.0.1&longUrl=http://ya.ru&login=bitlyapidemo&apiKey=R_0da49e0a9118ff35f52f629d2d71bf07&format=xml"], 
+                         [NSURL URLWithString:@"http://api.bit.ly/shorten?version=2.0.1&longUrl=http%3A%2F%2Fya.ru&login=bitlyapidemo&apiKey=R_0da49e0a9118ff35f52f629d2d71bf07&format=xml"], 
                          @"shoulf build it");
 
 }
 
 - (void)testCreationWithEscaping
 {
-    parser_ = [BitLyParser newWithURLFromString:@"http://www.google.com/notebook/?nbid=CalhjUfC37Hs%2FBDRJPQgoQhq3Z_YAk#b=CalhjUfC37Hs%2FBDQok3goQvfTWxook"];
-    STAssertEqualObjects([parser_ longURL_], @"http://www.google.com/notebook/?nbid=CalhjUfC37Hs%2FBDRJPQgoQhq3Z_YAk#b=CalhjUfC37Hs%2FBDQok3goQvfTWxook", @"should be ya.ru");
+    parser_ = [BitLyParser newWithURLFromString:@"https://www.google.com/analytics/reporting/?reset=1&id=7372313&pdr=20090321-20090420"];
+    STAssertEqualObjects([parser_ longURL_], @"https://www.google.com/analytics/reporting/?reset=1&id=7372313&pdr=20090321-20090420", @"should be ya.ru");
     STAssertEqualObjects([parser_ queryURL_],
-                         [NSURL URLWithString:@"http://api.bit.ly/shorten?version=2.0.1&longUrl=http://www.google.com/notebook/?nbid=CalhjUfC37Hs%252FBDRJPQgoQhq3Z_YAk%23b=CalhjUfC37Hs%252FBDQok3goQvfTWxook&login=bitlyapidemo&apiKey=R_0da49e0a9118ff35f52f629d2d71bf07&format=xml"], 
+                         [NSURL URLWithString:@"http://api.bit.ly/shorten?version=2.0.1&longUrl=https%3A%2F%2Fwww.google.com%2Fanalytics%2Freporting%2F%3Freset%3D1%26id%3D7372313%26pdr%3D20090321-20090420&login=bitlyapidemo&apiKey=R_0da49e0a9118ff35f52f629d2d71bf07&format=xml"], 
                          @"shoulf build it");
     
 }

@@ -24,5 +24,21 @@
 	<string>MainMenu</string>
 	<key>NSPrincipalClass</key>
 	<string>NSApplication</string>
+	<key>NSServices</key>
+	<array>
+		<dict>
+			<key>NSSendTypes</key>
+			<array>
+				<string>NSStringPboardType</string>
+			</array>
+			<key>NSMessage</key>
+			<string>shortenURL</string>
+			<key>NSMenuItem</key>
+			<dict>
+				<key>Menu item title</key>
+				<string>Shorten URL</string>
+			</dict>
+		</dict>
+	</array>
 </dict>
 </plist>
