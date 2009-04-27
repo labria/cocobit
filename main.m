@@ -13,7 +13,7 @@
 int main(int argc, char *argv[])
 {
 
-    void NSUpdateDynamicServices(void);
+    /*
     @try {
         Clip * clip = [[Clip alloc] init];
         [clip getData];
@@ -29,9 +29,10 @@ int main(int argc, char *argv[])
     @finally {
         return 0;
     }
+     */
     //DropHandler * drop;
     //drop = [[DropHandler alloc] init];
     //[NSApp setServicesProvider:drop];
     //return 0;
-    //return NSApplicationMain(argc,  (const char **) argv);
+    return NSApplicationMain(argc,  (const char **) argv);
 }
