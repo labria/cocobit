@@ -37,8 +37,12 @@
             BitLyParser * parser = [BitLyParser newWithURLFromString:[clip string_]];
             [parser getData];
             NSString * result = [parser parseXML];
-            [growl_ growlString:result];
-            [clip_ setData:result];
+            if (result == nil) {
+                [growl_ growlString:@"No url in reply"];
+            } else {
+                [growl_ growlString:result];
+                [clip_ setData:result];
+            }
         }
         
         [NSApp terminate:self];
@@ -72,8 +76,12 @@
         BitLyParser * parser = [BitLyParser newWithURLFromString:pboardString];
         [parser getData];
         NSString * result = [parser parseXML];
-        [clip_ setData:result];
-        [growl_ growlString:result];
+        if (result == nil) {
+            [growl_ growlString:@"No url in reply"];
+        } else {
+            [growl_ growlString:result];
+            [clip_ setData:result];
+        }
     }
     [NSApp terminate:self];
 }
