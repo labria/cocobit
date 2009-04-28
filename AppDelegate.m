@@ -18,8 +18,41 @@
 	clip_ = [[Clip alloc] init];
 	[NSApp setServicesProvider:self];
 	NSUpdateDynamicServices();
+    
+    NSAppleEventDescriptor *evtDesc = [[NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
+    AEEventID evtID = [evtDesc eventID];
+    
+    if (evtDesc && (evtID == kAEReopenApplication || evtID == kAEOpenApplication) && [evtDesc eventClass] == kCoreEventClass) {
+        Clip * clip = [[Clip alloc] init];
+        [clip getData];
+        BitLyParser * parser = [BitLyParser newWithURLFromString:[clip string_]];
+        [parser getData];
+        NSString * result = [parser parseXML];
+        [clip setData:result];
+        [NSApp terminate:self];
+    }
+    /*
+    NSAppleEventManager *appleEventManager = [NSAppleEventManager sharedAppleEventManager];
+    [appleEventManager setEventHandler:self
+                           andSelector:@selector 
+     (handleOpenApplicationEvent:withReplyEvent:)
+                         forEventClass:kCoreEventClass
+                            andEventID:kAEOpenApplication];
+    
+    [appleEventManager setEventHandler:self
+                           andSelector:@selector 
+     (handleOpenApplicationEvent:withReplyEvent:)
+                         forEventClass:kCoreEventClass
+                            andEventID:kAEReopenApplication];
+    
+    [appleEventManager setEventHandler:self
+                           andSelector:@selector 
+     (handleOpenApplicationEvent:withReplyEvent:)
+                         forEventClass:kCoreEventClass
+                            andEventID:kAEOpenDocuments];
+     */
+    
 }
-
 
 
 - (void)shortenURL:(NSPasteboard *)pboard 

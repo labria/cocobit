@@ -9,30 +9,23 @@
 #import <Cocoa/Cocoa.h>
 #import "Clip.h"
 #import "BitLyParser.h"
-#import "DropHandler.h"
 int main(int argc, char *argv[])
 {
-
     /*
-    @try {
-        Clip * clip = [[Clip alloc] init];
-        [clip getData];
+    Clip * clip = [[Clip alloc] init];
+    [clip getData];
+    NSURL * url = [NSURL URLWithString:[clip string_]];
+    
+    if (url){
         BitLyParser * parser = [BitLyParser newWithURLFromString:[clip string_]];
         [parser getData];
         NSString * result = [parser parseXML];
         [clip setData:result];
-    }
-    @catch ( NSException *e ) {
-        
-    }
-    
-    @finally {
         return 0;
+    } else {
+        return NSApplicationMain(argc,  (const char **) argv);
     }
      */
-    //DropHandler * drop;
-    //drop = [[DropHandler alloc] init];
-    //[NSApp setServicesProvider:drop];
     //return 0;
-    return NSApplicationMain(argc,  (const char **) argv);
+   return NSApplicationMain(argc,  (const char **) argv);
 }
