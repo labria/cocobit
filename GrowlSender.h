@@ -1,22 +1,19 @@
 //
-//  AppDelegate.h
+//  GrowlSender.h
 //  CocoBit
 //
 //  Created by Dmitry Krassovski on 28.04.09.
 //  Copyright 2009 Getalime. All rights reserved.
 //
 
-#import "Clip.h"
+#import <Cocoa/Cocoa.h>
 #import "./Growl.framework/Headers/GrowlApplicationBridge.h"
-#import "GrowlSender.h"
-@interface AppDelegate : NSObject
+
+@interface GrowlSender : NSObject  <GrowlApplicationBridgeDelegate>
 {
 @public
-	Clip * clip_;
     BOOL growlReady;
-    GrowlSender * growl_;
 }
-
-- (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
-
+- (void)initializeGrowl;
+- (void)growlString:(NSString *) string;
 @end

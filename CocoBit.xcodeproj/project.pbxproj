@@ -24,6 +24,8 @@
 		07D1A2400FA7596500C123B8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1A23F0FA7596500C123B8 /* Growl.framework */; };
 		07D1A2410FA7596500C123B8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1A23F0FA7596500C123B8 /* Growl.framework */; };
 		07D1A27A0FA75E8D00C123B8 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D1A23F0FA7596500C123B8 /* Growl.framework */; };
+		07D1A2850FA7648200C123B8 /* GrowlSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1A2840FA7648200C123B8 /* GrowlSender.m */; };
+		07D1A2860FA7648200C123B8 /* GrowlSender.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1A2840FA7648200C123B8 /* GrowlSender.m */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
@@ -59,6 +61,8 @@
 		07D1A1D50FA7566900C123B8 /* GrowlConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlConstants.h; sourceTree = "<group>"; };
 		07D1A1D60FA7566900C123B8 /* GrowlConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlConstants.m; sourceTree = "<group>"; };
 		07D1A23F0FA7596500C123B8 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
+		07D1A2830FA7648200C123B8 /* GrowlSender.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlSender.h; sourceTree = "<group>"; };
+		07D1A2840FA7648200C123B8 /* GrowlSender.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlSender.m; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -103,26 +107,28 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
-		07D1A1D40FA7565400C123B8 /* Constants */ = {
+		07D1A1D40FA7565400C123B8 /* Growl */ = {
 			isa = PBXGroup;
 			children = (
 				07D1A1D50FA7566900C123B8 /* GrowlConstants.h */,
 				07D1A1D60FA7566900C123B8 /* GrowlConstants.m */,
+				07D1A2830FA7648200C123B8 /* GrowlSender.h */,
+				07D1A2840FA7648200C123B8 /* GrowlSender.m */,
 			);
-			name = Constants;
+			name = Growl;
 			sourceTree = "<group>";
 		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
-				07D1A1D40FA7565400C123B8 /* Constants */,
+				07D1A1D40FA7565400C123B8 /* Growl */,
 				078411C40F9CDC8A00B5614F /* BitLyParser.h */,
 				078411C50F9CDC8A00B5614F /* BitLyParser.m */,
 				078411C60F9CDC8A00B5614F /* Clip.m */,
 				078411C70F9CDC8A00B5614F /* Clip.h */,
-				078411A10F9CDBF700B5614F /* Tests */,
 				074BB1BC0FA65EE1008963AA /* AppDelegate.h */,
 				074BB1BD0FA65EE1008963AA /* AppDelegate.m */,
+				078411A10F9CDBF700B5614F /* Tests */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -304,6 +310,7 @@
 				078411CD0F9CDC9100B5614F /* ClipTest.m in Sources */,
 				074BB1BF0FA65EE1008963AA /* AppDelegate.m in Sources */,
 				07D1A1D80FA7566900C123B8 /* GrowlConstants.m in Sources */,
+				07D1A2860FA7648200C123B8 /* GrowlSender.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -316,6 +323,7 @@
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				074BB1BE0FA65EE1008963AA /* AppDelegate.m in Sources */,
 				07D1A1D70FA7566900C123B8 /* GrowlConstants.m in Sources */,
+				07D1A2850FA7648200C123B8 /* GrowlSender.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
