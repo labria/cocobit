@@ -19,11 +19,29 @@
 		078412C80F9CDF1900B5614F /* BitLyParser.m in Sources */ = {isa = PBXBuildFile; fileRef = 078411C50F9CDC8A00B5614F /* BitLyParser.m */; };
 		078412CB0F9CDF2100B5614F /* Clip.m in Sources */ = {isa = PBXBuildFile; fileRef = 078411C60F9CDC8A00B5614F /* Clip.m */; };
 		078413000F9CF9B600B5614F /* CocoBit.icns in Resources */ = {isa = PBXBuildFile; fileRef = 078412FF0F9CF9B600B5614F /* CocoBit.icns */; };
+		07D1A1D70FA7566900C123B8 /* GrowlConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1A1D60FA7566900C123B8 /* GrowlConstants.m */; };
+		07D1A1D80FA7566900C123B8 /* GrowlConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 07D1A1D60FA7566900C123B8 /* GrowlConstants.m */; };
+		07D1A2400FA7596500C123B8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1A23F0FA7596500C123B8 /* Growl.framework */; };
+		07D1A2410FA7596500C123B8 /* Growl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 07D1A23F0FA7596500C123B8 /* Growl.framework */; };
+		07D1A27A0FA75E8D00C123B8 /* Growl.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 07D1A23F0FA7596500C123B8 /* Growl.framework */; };
 		1DDD58160DA1D0A300B32029 /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1DDD58140DA1D0A300B32029 /* MainMenu.xib */; };
 		8D11072B0486CEB800E47090 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 089C165CFE840E0CC02AAC07 /* InfoPlist.strings */; };
 		8D11072D0486CEB800E47090 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* main.m */; settings = {ATTRIBUTES = (); }; };
 		8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		07D1A27E0FA75E9000C123B8 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				07D1A27A0FA75E8D00C123B8 /* Growl.framework in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		074BB1BC0FA65EE1008963AA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -38,6 +56,9 @@
 		078411C70F9CDC8A00B5614F /* Clip.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Clip.h; sourceTree = "<group>"; };
 		078411CC0F9CDC9100B5614F /* ClipTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ClipTest.m; sourceTree = "<group>"; };
 		078412FF0F9CF9B600B5614F /* CocoBit.icns */ = {isa = PBXFileReference; lastKnownFileType = image.icns; path = CocoBit.icns; sourceTree = "<group>"; };
+		07D1A1D50FA7566900C123B8 /* GrowlConstants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GrowlConstants.h; sourceTree = "<group>"; };
+		07D1A1D60FA7566900C123B8 /* GrowlConstants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GrowlConstants.m; sourceTree = "<group>"; };
+		07D1A23F0FA7596500C123B8 /* Growl.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Growl.framework; sourceTree = "<group>"; };
 		089C165DFE840E0CC02AAC07 /* English */ = {isa = PBXFileReference; fileEncoding = 10; lastKnownFileType = text.plist.strings; name = English; path = English.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = /System/Library/Frameworks/Cocoa.framework; sourceTree = "<absolute>"; };
 		13E42FB307B3F0F600E4EEF1 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = /System/Library/Frameworks/CoreData.framework; sourceTree = "<absolute>"; };
@@ -57,6 +78,7 @@
 			files = (
 				078411B10F9CDC5500B5614F /* Cocoa.framework in Frameworks */,
 				078411B00F9CDC5300B5614F /* SenTestingKit.framework in Frameworks */,
+				07D1A2410FA7596500C123B8 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +87,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8D11072F0486CEB800E47090 /* Cocoa.framework in Frameworks */,
+				07D1A2400FA7596500C123B8 /* Growl.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -80,9 +103,19 @@
 			name = Tests;
 			sourceTree = "<group>";
 		};
+		07D1A1D40FA7565400C123B8 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				07D1A1D50FA7566900C123B8 /* GrowlConstants.h */,
+				07D1A1D60FA7566900C123B8 /* GrowlConstants.m */,
+			);
+			name = Constants;
+			sourceTree = "<group>";
+		};
 		080E96DDFE201D6D7F000001 /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				07D1A1D40FA7565400C123B8 /* Constants */,
 				078411C40F9CDC8A00B5614F /* BitLyParser.h */,
 				078411C50F9CDC8A00B5614F /* BitLyParser.m */,
 				078411C60F9CDC8A00B5614F /* Clip.m */,
@@ -97,6 +130,7 @@
 		1058C7A0FEA54F0111CA2CBB /* Linked Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				07D1A23F0FA7596500C123B8 /* Growl.framework */,
 				078411A40F9CDC0C00B5614F /* SenTestingKit.framework */,
 				1058C7A1FEA54F0111CA2CBB /* Cocoa.framework */,
 			);
@@ -192,6 +226,7 @@
 				8D1107290486CEB800E47090 /* Resources */,
 				8D11072C0486CEB800E47090 /* Sources */,
 				8D11072E0486CEB800E47090 /* Frameworks */,
+				07D1A27E0FA75E9000C123B8 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -268,6 +303,7 @@
 				078411C90F9CDC8A00B5614F /* Clip.m in Sources */,
 				078411CD0F9CDC9100B5614F /* ClipTest.m in Sources */,
 				074BB1BF0FA65EE1008963AA /* AppDelegate.m in Sources */,
+				07D1A1D80FA7566900C123B8 /* GrowlConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -279,6 +315,7 @@
 				078412C80F9CDF1900B5614F /* BitLyParser.m in Sources */,
 				8D11072D0486CEB800E47090 /* main.m in Sources */,
 				074BB1BE0FA65EE1008963AA /* AppDelegate.m in Sources */,
+				07D1A1D70FA7566900C123B8 /* GrowlConstants.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,7 +346,11 @@
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = NO;
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
@@ -337,7 +378,11 @@
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				FRAMEWORK_SEARCH_PATHS = "$(DEVELOPER_LIBRARY_DIR)/Frameworks";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
+				);
 				GCC_ENABLE_FIX_AND_CONTINUE = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
 				GCC_MODEL_TUNING = G5;
@@ -366,6 +411,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_FIX_AND_CONTINUE = YES;
@@ -387,6 +434,8 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(DEVELOPER_FRAMEWORKS_DIR)\"",
+					"\"$(SRCROOT)/Frameworks\"",
+					"\"$(SRCROOT)\"",
 				);
 				GCC_MODEL_TUNING = G5;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

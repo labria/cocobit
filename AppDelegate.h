@@ -7,14 +7,16 @@
 //
 
 #import "Clip.h"
-
-@interface AppDelegate : NSObject
+#import "./Growl.framework/Headers/GrowlApplicationBridge.h"
+@interface AppDelegate : NSObject <GrowlApplicationBridgeDelegate>
 {
 @public
 	Clip * clip_;
+    BOOL growlReady;
+    NSArray *priorities_;
 }
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification;
-
-
+- (void)initializeGrowl;
+- (void)growlString:(NSString *) string;
 @end

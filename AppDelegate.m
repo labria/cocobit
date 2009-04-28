@@ -9,12 +9,14 @@
 #import "AppDelegate.h"
 #import "Clip.h"
 #import "BitLyParser.h"
-
+#import "GrowlConstants.h"
 
 @implementation AppDelegate
 
 - (void)applicationDidFinishLaunching:(NSNotification *)aNotification {
-	
+	[self initializeGrowl];
+    priorities_ = [[NSArray alloc] initWithObjects:priorityVeryLow, priorityModerate, priorityNormal, priorityHigh, priorityEmergency, nil];
+    [self growlString:@"foo"];
 	clip_ = [[Clip alloc] init];
 	[NSApp setServicesProvider:self];
 	NSUpdateDynamicServices();
@@ -79,4 +81,46 @@
     [NSApp terminate:self];
 }
 
+- (void) initializeGrowl
+{
+	growlReady = YES;
+	
+	// Tells the Growl framework that this class will receive callbacks
+	[GrowlApplicationBridge setGrowlDelegate:self];
+}
+
+
+- (NSDictionary*) registrationDictionaryForGrowl
+{
+	// For this application, only one notification is registered
+	NSArray* defaultNotifications = [NSArray arrayWithObjects:growlTestNotification, nil];
+	NSArray* allNotifications = [NSArray arrayWithObjects:growlTestNotification, nil];
+	
+	NSDictionary* growlRegistration = [NSDictionary dictionaryWithObjectsAndKeys: 
+                                       defaultNotifications, GROWL_NOTIFICATIONS_DEFAULT,
+                                       allNotifications, GROWL_NOTIFICATIONS_ALL, nil];
+	
+	return growlRegistration;
+}
+
+- (void)growlString:(NSString *) string
+{
+    [GrowlApplicationBridge notifyWithTitle: @"Bitly client"
+								description: @"desc"
+						   notificationName:growlTestNotification 
+                                   iconData:nil
+								   priority:3
+								   isSticky: NO
+                                clickContext: nil ];  
+    
+    /*
+    [GrowlApplicationBridge notifyWithTitle:[notifyWithTitle stringValue]
+								description:[description stringValue]
+						   notificationName:growlTestNotification 
+								   iconData:[[iconData image] TIFFRepresentation]
+								   priority:[priority intValue]
+								   isSticky:[isSticky state] == NSOnState ? YES : NO 
+							   clickContext:[clickContextButton state] == NSOnState ? [NSDate date] : nil];
+     */
+}
 @end
