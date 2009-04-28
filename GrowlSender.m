@@ -35,7 +35,7 @@
 
 - (void)growlString:(NSString *) string
 {
-    [GrowlApplicationBridge notifyWithTitle: @"Bitly client"
+    [GrowlApplicationBridge notifyWithTitle: @"Bit.ly client"
 								description: string
 						   notificationName:growlTestNotification 
                                    iconData:nil

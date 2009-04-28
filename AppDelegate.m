@@ -27,12 +27,20 @@
     if (evtDesc && (evtID == kAEReopenApplication || evtID == kAEOpenApplication) && [evtDesc eventClass] == kCoreEventClass) {
         Clip * clip = [[Clip alloc] init];
         [clip getData];
-        BitLyParser * parser = [BitLyParser newWithURLFromString:[clip string_]];
-        [parser getData];
-        NSString * result = [parser parseXML];
-        [clip setData:result];
+        NSString * url_string = [clip string_];
+        NSString * url_scheme = [[NSURL URLWithString:url_string] scheme];
+        if (url_scheme == nil) {
+            // It is not a url
+            [growl_ growlString:@"No valid URL provided"];
+        } else {
+            // It's  a url
+            BitLyParser * parser = [BitLyParser newWithURLFromString:[clip string_]];
+            [parser getData];
+            NSString * result = [parser parseXML];
+            [growl_ growlString:result];
+            [clip_ setData:result];
+        }
         
-        [growl_ growlString:result];
         [NSApp terminate:self];
     }
 }
@@ -55,11 +63,18 @@
 		return;
 	}
     
-    BitLyParser * parser = [BitLyParser newWithURLFromString:pboardString];
-    [parser getData];
-    NSString * result = [parser parseXML];
-    [clip_ setData:result];
-    [growl_ growlString:result];
+    NSString * url_scheme = [[NSURL URLWithString:pboardString] scheme];
+    if (url_scheme == nil) {
+        // It is not a url
+        [growl_ growlString:@"No valid URL provided"];
+    } else {
+        // It's  a url
+        BitLyParser * parser = [BitLyParser newWithURLFromString:pboardString];
+        [parser getData];
+        NSString * result = [parser parseXML];
+        [clip_ setData:result];
+        [growl_ growlString:result];
+    }
     [NSApp terminate:self];
 }
 
