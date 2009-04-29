@@ -1,0 +1,4 @@
+CocoBit is a simple bit.ly client app for MacOS X.
+It has two ways of working:
+1. Copy the link to the clipboard, run the app, and paste the short link.
+2. Drag and drop the link to the application dock icon, and get the short link in your clipboard.
