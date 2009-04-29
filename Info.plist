@@ -27,6 +27,8 @@
 	<key>NSServices</key>
 	<array>
 		<dict>
+			<key>NSPortName</key>
+			<string>CocoBit</string>
 			<key>NSSendTypes</key>
 			<array>
 				<string>NSStringPboardType</string>
@@ -36,7 +38,7 @@
 			<key>NSMenuItem</key>
 			<dict>
 				<key>Menu item title</key>
-				<string>Shorten URL</string>
+				<string>CocoBit/Shorten URL</string>
 			</dict>
 		</dict>
 	</array>

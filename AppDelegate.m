@@ -17,7 +17,6 @@
 	clip_ = [[Clip alloc] init];
 	[NSApp setServicesProvider:self];
 	NSUpdateDynamicServices();
-    
     growl_ = [[GrowlSender alloc] init];
     [growl_ initializeGrowl];
     
@@ -83,6 +82,7 @@
             [clip_ setData:result];
         }
     }
+    
     [NSApp terminate:self];
 }
 
