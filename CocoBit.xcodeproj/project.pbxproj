@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0700275E0FA92705003B1C60 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700275D0FA92705003B1C60 /* PrefsController.m */; };
+		0700275F0FA92705003B1C60 /* PrefsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 0700275D0FA92705003B1C60 /* PrefsController.m */; };
 		074BB1BE0FA65EE1008963AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074BB1BD0FA65EE1008963AA /* AppDelegate.m */; };
 		074BB1BF0FA65EE1008963AA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 074BB1BD0FA65EE1008963AA /* AppDelegate.m */; };
 		078411B00F9CDC5300B5614F /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 078411A40F9CDC0C00B5614F /* SenTestingKit.framework */; };
@@ -49,6 +51,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		0700275C0FA92705003B1C60 /* PrefsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefsController.h; sourceTree = "<group>"; };
+		0700275D0FA92705003B1C60 /* PrefsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PrefsController.m; sourceTree = "<group>"; };
 		074BB1BC0FA65EE1008963AA /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		074BB1BD0FA65EE1008963AA /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		078411A40F9CDC0C00B5614F /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
@@ -136,6 +140,8 @@
 				074BB1BC0FA65EE1008963AA /* AppDelegate.h */,
 				074BB1BD0FA65EE1008963AA /* AppDelegate.m */,
 				078411A10F9CDBF700B5614F /* Tests */,
+				0700275C0FA92705003B1C60 /* PrefsController.h */,
+				0700275D0FA92705003B1C60 /* PrefsController.m */,
 			);
 			name = Classes;
 			sourceTree = "<group>";
@@ -319,6 +325,7 @@
 				074BB1BF0FA65EE1008963AA /* AppDelegate.m in Sources */,
 				07D1A1D80FA7566900C123B8 /* GrowlConstants.m in Sources */,
 				07D1A2860FA7648200C123B8 /* GrowlSender.m in Sources */,
+				0700275F0FA92705003B1C60 /* PrefsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,6 +339,7 @@
 				074BB1BE0FA65EE1008963AA /* AppDelegate.m in Sources */,
 				07D1A1D70FA7566900C123B8 /* GrowlConstants.m in Sources */,
 				07D1A2850FA7648200C123B8 /* GrowlSender.m in Sources */,
+				0700275E0FA92705003B1C60 /* PrefsController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

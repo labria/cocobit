@@ -10,6 +10,7 @@
 #import "Clip.h"
 #import "BitLyParser.h"
 #import "GrowlSender.h"
+#import "PrefsController.h"
 
 @implementation AppDelegate
 
@@ -19,6 +20,11 @@
 	NSUpdateDynamicServices();
     growl_ = [[GrowlSender alloc] init];
     [growl_ initializeGrowl];
+    PrefsController * prefs_;
+    prefs_ = [[PrefsController alloc] init];
+    //NSLog(@"Showing Preferences");
+    //[prefsController showWindow: self];
+
     
     NSAppleEventDescriptor *evtDesc = [[NSAppleEventManager sharedAppleEventManager] currentAppleEvent];
     AEEventID evtID = [evtDesc eventID];

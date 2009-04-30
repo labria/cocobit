@@ -9,9 +9,10 @@
 #import "Clip.h"
 #import "./Growl.framework/Headers/GrowlApplicationBridge.h"
 #import "GrowlSender.h"
+#import "PrefsController.h"
 @interface AppDelegate : NSObject
 {
-@public
+    IBOutlet PrefsController * prefsController;
 	Clip * clip_;
     BOOL growlReady;
     GrowlSender * growl_;
